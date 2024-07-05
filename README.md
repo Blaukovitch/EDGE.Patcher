@@ -1,5 +1,7 @@
 ![progress](http://www.yarntomato.com/percentbarmaker/button.php?barPosition=77&leftFill=%23FF0000 "progress") 
 # EDGE.Patcher™
+<img src="https://github.com/Blaukovitch/EDGE.Patcher/blob/main/edge_patcher_logo.png" width="64">
+
 Official tool for binary patching (assembly bithack &amp; string replace) propietary Microsoft EDGE (msedge.exe) &amp; Google Chrome (chrome.exe) browsers.
 
 # © NOT MY!
