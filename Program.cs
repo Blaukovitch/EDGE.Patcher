@@ -609,7 +609,7 @@ namespace Edge.Patcher
 					{ "userenv.dll", "USERENX.dll" },
 					{ "netapi32.dll", "NETAPI64.dll"},
 					{ "winhttp.dll", "WINXTTP.dll"},
-					//{ "bcrypt.dll", "xcrypt.dll"}, //(ELF)fix - not needed!
+					{ "bcrypt.dll", "xcrypt.dll"}, //(RETURNED)
 				},
 				Binary = new Dictionary<string, BinaryDescriptor> 
 				{ 
@@ -893,8 +893,8 @@ namespace Edge.Patcher
 					{ "userenv.dll", "USERENX.dll" },
 					{ "netapi32.dll", "NETAPI64.dll"},
 					{ "winhttp.dll", "WINXTTP.dll"},
-					//{ "bcrypt.dll", "xcrypt.dll"}, //(ELF)fix - not needed!
-					{ "bcryptprimitives.dll", "XCRYPTPRIMITIVES.dll"}, //(ELF)instead bcrypt.dll
+					{ "bcrypt.dll", "xcrypt.dll"}, //(RETURNED)
+					{ "bcryptprimitives.dll", "XCRYPTPRIMITIVES.dll"}, //(ELF) add
 				},
 				Binary = new Dictionary<string, BinaryDescriptor>
 				{
