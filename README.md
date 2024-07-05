@@ -35,7 +35,7 @@ VERY Big thanks for:  **-Q (QuQuRoon)**
 > [!CAUTION]
 > ❌ Be advice: this repository may be disabled!
 
-### Abilites
+### Abilities
 > Redirect PE COFF IMPORT/Delay table to API-MS libs;  
 > Patch binary assembly code;  
 > Clear PE COFF certificate area;  
