@@ -27,7 +27,7 @@ VERY Big thanks for:  **-Q (QuQuRoon)**
 * * If NOT need check [API-MS](https://github.com/Blaukovitch/API-MS-WIN_XP/) presents, you can add **-wo** key;  
 * Windows **7** machine. Wait for the crack operation to complete;  
 * Windows **7** machine. Copy API-MS libs (x64/x86) in to ROOT and VER directories;  
-* Windows **7** machine. Verify patched variant via run `chrome.exe`/`msedge.exe`. For **x86** vers may be need *-no-sandbox* or manual bithack in to [OllyDbg](https://www.ollydbg.de/)/(x32dbg)[https://x64dbg.com/];
+* Windows **7** machine. Verify patched variant via run `chrome.exe`/`msedge.exe`. For **x86** vers may be need *-no-sandbox* or manual bithack in to [OllyDbg](https://www.ollydbg.de/) / [x32dbg](https://x64dbg.com/);
 * Windows **7** machine. Remember that **x64** of browsers versions affected VirtualAlloc (MEM_RESERVED) memory HUGE bug;
 * Windows **7** machine. Swap ver. 109  `C:\Program Files\Google\Chrome\Application\` || `C:\Program Files\Microsoft\Edge\Application` to you patched version from ex: `C:\Temp\Application`
 * Piracy WIN! ^)
