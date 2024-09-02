@@ -25,6 +25,8 @@ namespace Edge.Patcher
 		public byte[] Key { get; set; }
 		public byte[] Value { get; set; }
 		public UpdateType UpdateType { get; set; }
+
+		//(ELF) add
 		public ArchTypeE ArchType { get; set; }
 	}
 
@@ -37,10 +39,11 @@ namespace Edge.Patcher
 		All = 3,
 	}
 
+	//(ELF) add
 	internal enum ArchTypeE
 	{
 		Both = 0,
-		x86 = 1,
-		x64 = 2,
+		x86_only = 1,
+		x64_only = 2,
 	}
 }
