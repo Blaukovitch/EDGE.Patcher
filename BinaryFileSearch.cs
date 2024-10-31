@@ -9,7 +9,7 @@ namespace Edge.Patcher
 	internal class BinaryFileSearch
 	{
 		private string _fileName;
-		private const int BUFFER_SIZE = 64 * 1024 * 1024;
+		private const int BUFFER_SIZE = 128 * 1024 * 1024;
 
 		public BinaryFileSearch(string fileName)
 		{
@@ -21,7 +21,7 @@ namespace Edge.Patcher
 			var results = new List<KeyValuePair<string, long>>();
 			if (items == null || items.Count == 0)
 			{
-				return results;
+				return results.ToList();
 			}
 
 			using (FileStream fs = new FileStream(_fileName, FileMode.Open, FileAccess.Read))
@@ -63,7 +63,7 @@ namespace Edge.Patcher
 					}
 				}
 			}
-			return results;
+			return results.ToList();
 		}
 	}
 }
