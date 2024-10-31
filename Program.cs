@@ -41,6 +41,27 @@ namespace Edge.Patcher
 {
 	class Program
 	{
+		//(ELF) add
+		private static readonly string[] APIMSLib_List = {
+			@"API-MS-WIN-CORE-HANDLE-L1-1-0.dll",
+			@"API-MS-WIN-CORE-LIBRARYLOADER-L1-2-0.dll",
+			@"API-MS-WIN-CORE-REALTIME-L1-1-1.dll",
+			@"API-MS-WIN-CORE-WINRT-ERROR-L1-1-0.dll",
+			@"API-MS-WIN-CORE-WINRT-L1-1-0.dll",
+			@"API-MS-WIN-CORE-WINRT-STRING-L1-1-0.dll",
+			@"API-MS-WIN-POWER-BASE-L1-1-0.dll",
+			@"API-MS-WIN-POWER-SETTING-L1-1-1.dll",
+			@"API-MS-WIN-SHCORE-SCALING-L1-1-1.dll",
+			@"kernel64.dll",
+			@"netapi64.dll",
+			@"user64.dll",
+			@"userenx.dll",
+			@"WinXttp.dll",
+			@"wldp.dll",
+			@"xcryptprimitives.dll",
+			@"Xfplat.dll",
+		};
+
 		static int Main(string[] args)
 		{
 			string rootFolder = args.FirstOrDefault() ?? Directory.GetCurrentDirectory();
@@ -86,7 +107,9 @@ namespace Edge.Patcher
 			//(ELF) add
 			if (!without_scan_apims_libs)
             {
-                Verify_APIMSLibs_status(rootFolder, extensions);
+				var extensions = new[] { ".exe", ".dll" };
+
+				Verify_APIMSLibs_status(rootFolder, extensions);
             }
 			return 0;
 		}
@@ -1699,26 +1722,5 @@ namespace Edge.Patcher
 			Console.WriteLine(" -------------------------------------------------------\r\n Present: {0, -40} {1, -10} ", APIMSLib_List.Length, i);
             return verify_result;
         }
-
-		//(ELF) add
-		private static readonly string[] APIMSLib_List = { 
-			@"API-MS-WIN-CORE-HANDLE-L1-1-0.dll",
-			@"API-MS-WIN-CORE-LIBRARYLOADER-L1-2-0.dll",
-			@"API-MS-WIN-CORE-REALTIME-L1-1-1.dll",
-			@"API-MS-WIN-CORE-WINRT-ERROR-L1-1-0.dll",
-			@"API-MS-WIN-CORE-WINRT-L1-1-0.dll",
-			@"API-MS-WIN-CORE-WINRT-STRING-L1-1-0.dll",
-			@"API-MS-WIN-POWER-BASE-L1-1-0.dll",
-			@"API-MS-WIN-POWER-SETTING-L1-1-1.dll",
-			@"API-MS-WIN-SHCORE-SCALING-L1-1-1.dll",
-			@"kernel64.dll",
-			@"netapi64.dll",
-			@"user64.dll",
-			@"userenx.dll",
-			@"WinXttp.dll",
-			@"wldp.dll",
-			@"xcryptprimitives.dll",
-			@"Xfplat.dll",
-		};
 	}
 }
